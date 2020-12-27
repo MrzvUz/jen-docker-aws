@@ -31,5 +31,5 @@ sudo usermod -aG docker ubuntu
 
 # 06. Pull Jenkins docker image and run.
 sudo mkdir -p /var/jenkins_home
-chown -R 1000:1000 /var/jenkins_home
-sudo docker run -p 8080:8080 -p 50000:50000 -v /var/jenkins_home:/var/jenkins_home -d --name jenkins jenkins
+sudo chown -R 1000:1000 /var/jenkins_home
+sudo docker run -p 8080:8080 -p 50000:50000 -d -v /var/jenkins_home:/var/jenkins_home  jenkins/jenkins
